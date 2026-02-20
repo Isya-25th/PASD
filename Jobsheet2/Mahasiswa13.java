@@ -35,5 +35,13 @@ public class Mahasiswa13 {
         }
     }
 
+    public Mahasiswa13() {
+    }
 
+    public Mahasiswa13(String nm, String nim, double ipk, String kls) {
+        nama = nm;
+        this.nim = nim;
+        this.ipk = ipk;
+        kelas = kls;
+    }
 }
