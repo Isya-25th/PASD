@@ -23,7 +23,8 @@ public class MatakuliahDemo13 {
             jumlahJam = Integer.parseInt(dummy);
             System.out.println("--------------------------------------");
 
-            arrayOfMatakuliah13[i] = new Matakuliah13(kode, nama, sks, jumlahJam);
+            arrayOfMatakuliah13[i] = new Matakuliah13();
+            arrayOfMatakuliah13[i].tambahData(kode, nama, sks, jumlahJam);
         }
     }
 }
