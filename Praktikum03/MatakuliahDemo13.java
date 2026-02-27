@@ -26,5 +26,12 @@ public class MatakuliahDemo13 {
             arrayOfMatakuliah13[i] = new Matakuliah13();
             arrayOfMatakuliah13[i].tambahData(kode, nama, sks, jumlahJam);
         }
+
+        int index = 1;
+        for (Matakuliah13 matakuliah : arrayOfMatakuliah13) {
+            System.out.println("Data Matakuliah ke-"+ index++);
+            matakuliah.cetakInfo();
+            System.out.println("--------------------------------------");
+        }
     }
 }
