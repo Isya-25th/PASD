@@ -19,7 +19,7 @@ public class MahasiswaBerprestasi13 {
             }
         }
     }
-    
+
     void bubbleSort() {
         for (int i = 0; i < listMhs.length - 1; i++) {
             for (int j = 1; j < listMhs.length - i; j++) {
@@ -55,7 +55,7 @@ public class MahasiswaBerprestasi13 {
             if (listMhs[i] != null) {
                 Mahasiswa13 temp = listMhs[i];
                 int j = i;
-                while (j > 0 && listMhs[j - 1] != null && listMhs[j - 1].ipk > temp.ipk) {
+                while (j > 0 && listMhs[j - 1] != null && listMhs[j - 1].ipk < temp.ipk) {
                     listMhs[j] = listMhs[j - 1];
                     j--;
                 }
