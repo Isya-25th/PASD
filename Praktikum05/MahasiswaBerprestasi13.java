@@ -19,8 +19,7 @@ public class MahasiswaBerprestasi13 {
             }
         }
     }
-
-    // Bubble Sort (DESC)
+    
     void bubbleSort() {
         for (int i = 0; i < listMhs.length - 1; i++) {
             for (int j = 1; j < listMhs.length - i; j++) {
@@ -35,7 +34,6 @@ public class MahasiswaBerprestasi13 {
         }
     }
 
-    // Selection Sort (ASC)
     void selectionSort() {
         for (int i = 0; i < listMhs.length - 1; i++) {
             int idxMin = i;
@@ -52,7 +50,6 @@ public class MahasiswaBerprestasi13 {
         }
     }
 
-    // Insertion Sort (ASC)
     void insertionSort() {
         for (int i = 1; i < listMhs.length; i++) {
             if (listMhs[i] != null) {
