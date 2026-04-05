@@ -1,24 +1,42 @@
+import java.util.Scanner;
+
 public class MahasiswaDemo13 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         MahasiswaBerprestasi13 list = new MahasiswaBerprestasi13();
-        
-        Mahasiswa13 m1 = new Mahasiswa13("123", "Zidan", "2A", 3.2);
-        Mahasiswa13 m2 = new Mahasiswa13("124", "Ayu", "2A", 3.5);
-        Mahasiswa13 m3 = new Mahasiswa13("125", "Sofi", "2A", 3.1);
-        Mahasiswa13 m4 = new Mahasiswa13("126", "Sita", "2A", 3.9);
-        Mahasiswa13 m5 = new Mahasiswa13("127", "Miki", "2A", 3.7);
-        
-        list.tambah(m1);
-        list.tambah(m2);
-        list.tambah(m3);
-        list.tambah(m4);
-        list.tambah(m5);
-        
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Masukkan Data Mahasiswa ke-" + (i + 1));
+            System.out.print("NIM: ");
+            String nim = sc.nextLine();
+            System.out.print("Nama: ");
+            String nama = sc.nextLine();
+            System.out.print("Kelas: ");
+            String kelas = sc.nextLine();
+            System.out.print("IPK: ");
+            double ipk = sc.nextDouble();
+            sc.nextLine();
+            
+            Mahasiswa13 m = new Mahasiswa13(nim, nama, kelas, ipk);
+            list.tambah(m);
+            System.out.println();
+        }
+
         System.out.println("Data mahasiswa sebelum sorting: ");
         list.tampil();
-        
-        System.out.println("Data Mahasiswa setelah sorting berdasarkan IPK (DESC): ");
+
+        System.out.println("Data Mahasiswa setelah sorting berdasarkan IPK DESC (Bubble Sort): ");
         list.bubbleSort();
         list.tampil();
+
+        System.out.println("Data Mahasiswa setelah sorting berdasarkan IPK ASC (Selection Sort): ");
+        list.selectionSort();
+        list.tampil();
+        
+        System.out.println("Data Mahasiswa setelah sorting berdasarkan IPK ASC (Insertion Sort): ");
+        list.insertionSort();
+        list.tampil();
+        
+        sc.close();
     }
 }
