@@ -1,6 +1,10 @@
 public class MahasiswaBerprestasi13 {
-    Mahasiswa13[] listMhs = new Mahasiswa13[5];
-    int idx;    
+    Mahasiswa13[] listMhs;
+    int idx;
+    
+    MahasiswaBerprestasi13(int jumlah){
+        listMhs = new Mahasiswa13[jumlah];
+    }
     
     void tambah(Mahasiswa13 m){
         if (idx < listMhs.length){
@@ -37,7 +41,7 @@ public class MahasiswaBerprestasi13 {
             if (cari == listMhs[mid].ipk){
                 return (mid);
             }
-            else if (listMhs[mid].ipk>cari){
+            else if (listMhs[mid].ipk < cari){
                 return findBinarySearch(cari,left,mid-1);
             }
             else{
@@ -48,7 +52,7 @@ public class MahasiswaBerprestasi13 {
     }
     
     void tampilPosisi (double x, int pos){
-        if (pos!=1){
+        if (pos!=-1){
             System.out.println("data mahasiswa dengan IPK :" + x + " ditemukan pada indeks " + pos );
         }
         else {
