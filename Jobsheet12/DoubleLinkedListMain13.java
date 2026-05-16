@@ -49,10 +49,9 @@ public class DoubleLinkedListMain13 {
                     list.insertAfter(keyNim, dataBaru);
                     break;
                 case 4:
-                    System.out.println("Fitur ini ada di Percobaan 2.");
+                    list.removeFirst();
                     break;
                 case 5:
-                    System.out.println("Fitur ini ada di Percobaan 2.");
                     break;
                 case 6:
                     list.print();
